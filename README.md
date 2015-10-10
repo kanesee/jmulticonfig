@@ -5,6 +5,7 @@ Java configuration management for multi-project builds.
 There are already lots of great configuration management tools you can use in your project, but a problem arises when your project grows and you build on other components that use the same config manager.
 
 Here's the problem scenario
+
 1. Project A, a standalone app, loads config.xml from the classpath. 
 2. Project B, a standalone app, loads config.xml from the classpath.
 3. Project B later depends on project A. Uh oh, which config.xml in the classpath will the app load?
