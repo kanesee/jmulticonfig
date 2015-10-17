@@ -17,16 +17,16 @@ One solution is to include all of Project A's config in Project B and somehow ma
 jmulticonfig addresses this issue with a simple system of Priorities and Overrides.
 The particulars of this solution
 
-1. config files must follow a naming pattern: config.[priority].properties
-`e.g. "config.1.properties", "config.2.properties", etc`
+1. config files must follow a naming pattern: jmulticonfig.[priority].properties
+`e.g. "jmulticonfig.1.properties", "jmulticonfig.2.properties", etc`
 2. all config files that follow this naming pattern and are in the classpath will be included
 3. properties in config files with higher priorities override ones with lower properties
 ```
 e.g.
-Suppose config.1.properties includes the following
+Suppose jmulticonfig.1.properties includes the following
 foo=1
 bar=2
-Suppose config.2.properties includes the following
+Suppose jmulticonfig.2.properties includes the following
 bar=3
 In this example, your app will get the properties
 foo-1
@@ -35,8 +35,8 @@ bar=3
 
 So in our previous example, your solution can simply be
 
-1. Project A includes config.1.properties
-2. Project B includes config.2.properties
+1. Project A includes jmulticonfig.1.properties
+2. Project B includes jmulticonfig.2.properties
 
 The benefits
 
