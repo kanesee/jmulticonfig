@@ -1,4 +1,4 @@
-package me.kanesee.jmulticonfig;
+package com.github.kanesee.jmulticonfig;
 
 import java.io.IOException;
 import java.io.InputStream;

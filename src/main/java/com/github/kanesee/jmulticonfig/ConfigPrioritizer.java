@@ -1,4 +1,4 @@
-package me.kanesee.jmulticonfig;
+package com.github.kanesee.jmulticonfig;
 
 import java.net.URL;
 import java.util.Collections;

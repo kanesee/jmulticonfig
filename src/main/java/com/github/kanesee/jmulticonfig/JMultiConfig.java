@@ -1,9 +1,16 @@
-package me.kanesee.jmulticonfig;
+package com.github.kanesee.jmulticonfig;
 
 import java.net.URL;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * Main class to get properties
+ * Reads all jmulticonfig.*.properties files in the classpath, 
+ * prioritizes them, and returns the properties within them.
+ * @author ksee
+ *
+ */
 public class JMultiConfig {
   
   // jmulticonfig.*.properties
@@ -11,6 +18,12 @@ public class JMultiConfig {
 
   private static Properties s_props = null;
 
+  /**
+   * Reads all jmulticonfig.*.properties files in the classpath, 
+   * prioritizes them, and returns the properties within them.
+   * 
+   * @return
+   */
   public static synchronized Properties getConfig() {
     if( s_props == null ) {
       List<URL> configs = new ConfigLocator().locate();
